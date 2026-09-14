@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page C Profile</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap Icon -->
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #071769;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+
+        /* ---------------- NAVBAR ---------------- */
+
+        .nav-bar {
+            background-color: #05051c;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 25px 70px;
+        }
+
+        .logo {
+            font-family: 'Oswald';
+            font-size: 18px;
+            font-weight: 600;
+        }
+
+        .menu {
+            display: flex;
+            gap: 30px;
+        }
+
+        .menu a {
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .menu a:hover {
+            color: #ff674d;
+        }
+
+
+        /* ---------------- HERO ---------------- */
+
+        .hero {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 60px 80px;
+        }
+
+        .hero-text {
+            width: 45%;
+        }
+
+        .hero-text h1 {
+            font-family: 'Oswald';
+            font-size: 55px;
+            line-height: 1;
+            margin: 0 0 20px;
+        }
+
+        .hero-text p {
+            font-size: 14px;
+            line-height: 1.6;
+            color: #d7d7d7;
+        }
+
+        .contact-btn {
+            display: inline-block;
+            margin-top: 15px;
+            background-color: white;
+            color: #071769;
+            text-decoration: none;
+            padding: 12px 25px;
+            border-radius: 25px;
+            font-size: 13px;
+        }
+
+        .contact-btn:hover {
+            background-color: #ff674d;
+            color: white;
+        }
+
+        .social {
+            display: inline-flex;
+            margin-left: 15px;
+            gap: 15px;
+        }
+
+        .social a {
+            color: white;
+        }
+
+        .hero-picture {
+            width: 45%;
+            position: relative;
+            text-align: center;
+        }
+
+        .hero-picture img {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 15px;
+        }
+
+        .name-tag {
+            position: absolute;
+            bottom: 30px;
+            left: 20px;
+            background-color: #ff674d;
+            padding: 8px 18px;
+            font-size: 22px;
+            font-weight: bold;
+            border-radius: 4px;
+        }
+
+
+        /* ---------------- COMMON SECTION ---------------- */
+
+        .section {
+            border-top: 1px solid rgba(255, 255, 255, 0.15);
+            padding: 60px 80px;
+            display: flex;
+        }
+
+        .section-title {
+            width: 40%;
+        }
+
+        .section-title h2 {
+            font-family: 'Oswald';
+            font-size: 38px;
+            margin: 0;
+        }
+
+        .section-content {
+            width: 60%;
+        }
+
+        .section-content p {
+            font-size: 14px;
+            line-height: 1.7;
+            color: #e0e0e0;
+        }
+
+
+        /* ---------------- ABOUT ---------------- */
+
+        .about-button {
+            background-color: white;
+            color: #071769;
+            padding: 10px 22px;
+            text-decoration: none;
+            border-radius: 20px;
+            display: inline-block;
+            margin-top: 10px;
+            font-size: 12px;
+        }
+
+        .about-social {
+            display: inline-flex;
+            gap: 15px;
+            margin-left: 15px;
+        }
+
+        .about-social a {
+            color: white;
+        }
+
+        .about-image {
+            padding: 0 80px 60px;
+        }
+
+        .about-image img {
+            width: 100%;
+            border-radius: 15px;
+            display: block;
+        }
+
+
+        /* ---------------- CAPABILITIES ---------------- */
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .skill {
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            border-radius: 20px;
+            padding: 9px 18px;
+            font-size: 12px;
+        }
+
+
+        /* ---------------- EXPERIENCE ---------------- */
+
+        .experience-item {
+            margin-bottom: 35px;
+        }
+
+        .experience-head {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .experience-head h3 {
+            font-size: 18px;
+            margin: 0;
+        }
+
+        .experience-head span {
+            font-size: 12px;
+            color: #bbbbbb;
+        }
+
+        .experience-item p {
+            margin-top: 10px;
+        }
+
+
+        /* ---------------- CONNECT ---------------- */
+
+        .connect-info {
+            width: 40%;
+        }
+
+        .connect-info h2 {
+            font-family: 'Oswald';
+            font-size: 38px;
+            margin-top: 0;
+        }
+
+        .connect-info p {
+            color: #d0d0d0;
+            font-size: 13px;
+        }
+
+        .connect-social {
+            margin-top: 25px;
+            display: flex;
+            gap: 20px;
+        }
+
+        .connect-social a {
+            color: white;
+        }
+
+        .contact-form {
+            width: 60%;
+        }
+
+        .form-group {
+            margin-bottom: 18px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 12px;
+            margin-bottom: 7px;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            border: none;
+            background-color: #050c45;
+            color: white;
+            padding: 14px;
+            outline: none;
+        }
+
+        .form-group textarea {
+            height: 120px;
+            resize: none;
+        }
+
+        .submit-btn {
+            background-color: white;
+            color: #071769;
+            padding: 10px 25px;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+
+        .submit-btn:hover {
+            background-color: #ff674d;
+            color: white;
+        }
+
+
+        /* ---------------- FOOTER ---------------- */
+
+        footer {
+            border-top: 1px solid rgba(255, 255, 255, 0.15);
+            text-align: center;
+            padding: 25px;
+            font-size: 11px;
+            color: #bbbbbb;
+        }
+    </style>
+</head>
+
+
+<body>
+
+    <!-- NAVBAR -->
+    <div class="nav-bar">
+
+        <div class="logo">
+            TANAPOOM SRIRABAY
+        </div>
+
+        <div class="menu">
+            <a href="#">Work</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+        </div>
+
+    </div>
+
+
+    <!-- HERO -->
+    <div class="hero">
+
+        <div class="hero-text">
+
+            <h1>
+                HI, I AM<br>
+                TANAPOOM S.
+            </h1>
+
+            <p>
+                I'm a creative Web Developer who enjoys building
+                modern and simple websites.
+            </p>
+
+            <a href="#" class="contact-btn">
+                CONTACT ME
+            </a>
+
+            <div class="social">
+                <a href="#"><i class="bi bi-linkedin"></i></a>
+                <a href="#"><i class="bi bi-github"></i></a>
+            </div>
+
+        </div>
+
+
+        <div class="hero-picture">
+
+            <img src="./images/pic1page_c.png" alt="profile">
+
+        
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ABOUT ME -->
+    <div class="section">
+
+        <div class="section-title">
+            <h2>ABOUT ME</h2>
+        </div>
+
+        <div class="section-content">
+
+            <p>
+                ผมเป็นนักพัฒนาเว็บไซต์ที่ชื่นชอบการสร้างเว็บไซต์
+                ที่มีความเรียบง่ายและใช้งานง่าย
+                ผมสนใจการออกแบบและการพัฒนาเว็บไซต์
+                เพื่อสร้างประสบการณ์ที่ดีให้กับผู้ใช้งาน
+            </p>
+
+            <p>
+                I enjoy learning new technologies and improving
+                my web development skills. My goal is to create
+                websites that are simple, modern and useful.
+            </p>
+
+            <a href="#" class="about-button">
+                DOWNLOAD RESUME
+            </a>
+
+            <div class="about-social">
+                <a href="#"><i class="bi bi-linkedin"></i></a>
+                <a href="#"><i class="bi bi-github"></i></a>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ABOUT IMAGE -->
+    <div class="about-image">
+        <img src="./images/pic2page_c.png" alt="working">
+    </div>
+
+
+    <!-- MY CAPABILITIES -->
+    <div class="section">
+
+        <div class="section-title">
+            <h2>MY CAPABILITIES</h2>
+        </div>
+
+        <div class="section-content">
+
+            <p>
+                Technologies and tools that I have experience using
+                for web development.
+            </p>
+
+            <div class="skills">
+
+                <div class="skill">HTML</div>
+                <div class="skill">CSS</div>
+                <div class="skill">JAVASCRIPT</div>
+                <div class="skill">FLUTTER</div>
+
+                <div class="skill">PHP</div>
+                <div class="skill">C#</div>
+                <div class="skill">REACT</div>
+                <div class="skill">BOOTSTRAP</div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- EXPERIENCE -->
+    <div class="section">
+
+        <div class="section-title">
+            <h2>MY EXPERIENCE</h2>
+        </div>
+
+        <div class="section-content">
+
+
+            <div class="experience-item">
+
+                <div class="experience-head">
+
+                    <h3>Freelance Developer</h3>
+
+                    <span>
+                        2024 - Present
+                    </span>
+
+                </div>
+
+                <p>
+                    Designed and developed websites for personal
+                    and small business projects using HTML,
+                    CSS and JavaScript.
+                </p>
+
+            </div>
+
+
+            <div class="experience-item">
+
+                <div class="experience-head">
+
+                    <h3>Front-End Intern</h3>
+
+                    <span>
+                        2023 - 2024
+                    </span>
+
+                </div>
+
+                <p>
+                    Worked with developers to create user interfaces
+                    and improve website layouts.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- LET'S CONNECT -->
+    <div class="section">
+
+        <div class="connect-info">
+
+            <h2>LET'S CONNECT</h2>
+
+            <p>
+                Say hello at example@email.com
+            </p>
+
+            <p>
+                For more info, here's my resume.
+            </p>
+
+            <div class="connect-social">
+
+                <a href="#">
+                    <i class="bi bi-linkedin"></i>
+                </a>
+
+                <a href="#">
+                    <i class="bi bi-github"></i>
+                </a>
+
+                <a href="#">
+                    <i class="bi bi-instagram"></i>
+                </a>
+
+                <a href="#">
+                    <i class="bi bi-twitter"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="contact-form">
+
+            <form>
+
+                <div class="form-group">
+
+                    <label>Name</label>
+
+                    <input type="text">
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>Email</label>
+
+                    <input type="email">
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>Subject</label>
+
+                    <input type="text">
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>Message</label>
+
+                    <textarea></textarea>
+
+                </div>
+
+
+                <button class="submit-btn">
+                    Submit
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <!-- FOOTER -->
+    <footer>
+        © 2026 Created By Tanapoom
+    </footer>
+
+
+</body>
+
+</html>
